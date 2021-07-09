@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorStartLinearGradient">#E58282</color>
     <color name="colorEndLinearGradient">#AB3B61</color>
+    <color name="colorStartLinearGradient1">#FDC9B3</color>
+    <color name="colorEndLinearGradient1">#FFFFFF</color>
 </resources>
