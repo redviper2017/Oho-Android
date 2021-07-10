@@ -1,126 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.LoginActivity">
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <LinearLayout
+        android:background="@drawable/background_curve_3"
+        android:elevation="@dimen/_5sdp"/>
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_alignParentTop="true"
+        android:elevation="@dimen/_5sdp">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/oho"
+            android:textSize="@dimen/_60ssp"
+            android:textColor="@color/colorEndLinearGradient"
+            android:fontFamily="@font/lovina_regular"
+            android:layout_gravity="center" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_slogan"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sf_pro_heavy"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <!-- Email -->
+    <LinearLayout
+        android:id="@+id/email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:elevation="@dimen/_5sdp"
+        android:visibility="visible">
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:elevation="@dimen/_10sdp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_200sdp"
-                android:orientation="vertical"
-                android:background="@drawable/gradient_background">
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/oho"
-                    android:textSize="@dimen/_60ssp"
-                    android:textColor="@color/colorEndLinearGradient"
-                    android:fontFamily="@font/lovina_regular"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/_30sdp"/>
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_slogan"
-                    android:textSize="@dimen/_16ssp"
-                    android:textColor="@color/colorEndLinearGradient"
-                    android:layout_gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_200sdp"
-                android:orientation="vertical"
-                android:background="@drawable/curve">
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    app:cardCornerRadius="@dimen/_30sdp"
-                    android:layout_marginStart="@dimen/_15sdp"
-                    android:layout_marginEnd="@dimen/_15sdp"
-                    app:cardElevation="@dimen/_10sdp">
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/MyTextInputLayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="@string/email"
-                        app:boxCornerRadiusTopStart="@dimen/_30sdp"
-                        app:boxCornerRadiusTopEnd="@dimen/_30sdp"
-                        app:boxCornerRadiusBottomStart="@dimen/_30sdp"
-                        app:boxCornerRadiusBottomEnd="@dimen/_30sdp"
-                        app:boxStrokeWidth="0dp"
-                        android:layout_gravity="center">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/textinputedittext_phone"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableEnd="@drawable/email_ic"
-                            android:drawableTint="@color/black"
-                            android:inputType="phone" />
-                    </com.google.android.material.textfield.TextInputLayout>
-                </androidx.cardview.widget.CardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/button_login_with_gmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_15sdp"
-                    android:layout_marginEnd="@dimen/_15sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    app:cardCornerRadius="@dimen/_30sdp"
-                    android:elevation="@dimen/_10sdp">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/gradient_button"
-                        android:gravity="center"
-                        android:text="@string/login"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:padding="@dimen/_10sdp" />
-                </com.google.android.material.card.MaterialCardView>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:layout_gravity="center">
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/don_t_have_an_account"
-                        android:textSize="@dimen/_12ssp"
-                        android:textColor="@color/black" />
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sign_up_here"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/_12ssp"
-                        android:textColor="@color/black"
-                        android:layout_marginStart="@dimen/_2sdp"/>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-        <View
+            android:text="@string/email"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sf_pro_regular"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textAllCaps="true"/>
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_200sdp"
-            android:background="@drawable/dining"
-            android:layout_alignParentBottom="true"/>
-    </RelativeLayout>
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_30sdp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_30sdp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_button"
+                android:fontFamily="@font/sf_pro_regular"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textAllCaps="true"
+                android:padding="@dimen/_5sdp" />
+        </com.google.android.material.card.MaterialCardView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/don_t_have_an_account"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sf_pro_regular"
+                android:textStyle="bold" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up_here"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sf_pro_heavy"
+                android:layout_marginStart="@dimen/_5sdp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- OTP -->
+    <LinearLayout
+        android:id="@+id/otp_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:elevation="@dimen/_5sdp"
+        android:visibility="gone">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="otp"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sf_pro_regular"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textAllCaps="true"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_30sdp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:padding="@dimen/_10sdp"
+                android:inputType="text"/>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/button_verify_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_30sdp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_button"
+                android:fontFamily="@font/sf_pro_regular"
+                android:gravity="center"
+                android:text="verify otp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textAllCaps="true"
+                android:padding="@dimen/_5sdp" />
+        </com.google.android.material.card.MaterialCardView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/don_t_have_otp"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sf_pro_regular"
+                android:textStyle="bold" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/get_new"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sf_pro_heavy"
+                android:layout_marginStart="@dimen/_5sdp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
