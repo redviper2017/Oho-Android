@@ -40,4 +40,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(this,"verifying you request, please wait..",Toast.LENGTH_SHORT).show();
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        if(otpLayout.getVisibility() == View.VISIBLE) {
+            emailLayout.setVisibility(View.VISIBLE);
+            otpLayout.setVisibility(View.GONE);
+        }else
+            super.onBackPressed();
+    }
 }

@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_30sdp"
         android:layout_alignParentTop="true"
         android:elevation="@dimen/_5sdp">
         <com.google.android.material.textview.MaterialTextView
@@ -31,9 +31,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_slogan"
-            android:textSize="@dimen/_12ssp"
+            android:textSize="@dimen/_16ssp"
             android:textColor="@color/black"
-            android:fontFamily="@font/sf_pro_heavy"
+            android:fontFamily="@font/sf_pro_regular"
             android:layout_gravity="center"/>
     </LinearLayout>
 
@@ -67,7 +67,11 @@
                 android:layout_height="wrap_content"
                 android:background="#00000000"
                 android:padding="@dimen/_10sdp"
-                android:inputType="textEmailAddress"/>
+                android:inputType="textEmailAddress"
+                android:hint="abc@gmail.com"
+                android:fontFamily="@font/sf_pro_regular"
+                android:maxLines="1"
+                android:textAllCaps="false"/>
         </com.google.android.material.card.MaterialCardView>
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/button_login"
@@ -142,6 +146,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#00000000"
+                android:hint="xxxxxx"
+                android:fontFamily="@font/sf_pro_regular"
                 android:padding="@dimen/_10sdp"
                 android:inputType="text"/>
         </com.google.android.material.card.MaterialCardView>
