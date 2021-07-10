@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.LoginActivity">
+    tools:context=".Activities.RegisterActivity">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -86,7 +86,7 @@
                 android:background="@drawable/gradient_button"
                 android:fontFamily="@font/sf_pro_regular"
                 android:gravity="center"
-                android:text="@string/login"
+                android:text="@string/sign_up"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_12ssp"
@@ -94,7 +94,7 @@
                 android:padding="@dimen/_5sdp" />
         </com.google.android.material.card.MaterialCardView>
         <LinearLayout
-            android:id="@+id/nav_to_signup_button"
+            android:id="@+id/nav_to_login_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -102,7 +102,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/don_t_have_an_account"
+                android:text="@string/already_have_an_account"
                 android:textSize="@dimen/_12ssp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sf_pro_regular"
@@ -110,85 +110,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_up_here"
-                android:textSize="@dimen/_12ssp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sf_pro_heavy"
-                android:layout_marginStart="@dimen/_5sdp"/>
-        </LinearLayout>
-    </LinearLayout>
-
-    <!-- OTP -->
-    <LinearLayout
-        android:id="@+id/otp_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
-        android:elevation="@dimen/_5sdp"
-        android:visibility="gone">
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="otp"
-            android:textSize="@dimen/_12ssp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/sf_pro_regular"
-            android:textStyle="bold"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:textAllCaps="true"/>
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="@dimen/_30sdp">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
-                android:hint="xxxxxx"
-                android:fontFamily="@font/sf_pro_regular"
-                android:padding="@dimen/_10sdp"
-                android:inputType="text"/>
-        </com.google.android.material.card.MaterialCardView>
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/button_verify_otp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:cardCornerRadius="@dimen/_30sdp">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/gradient_button"
-                android:fontFamily="@font/sf_pro_regular"
-                android:gravity="center"
-                android:text="verify otp"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_12ssp"
-                android:textAllCaps="true"
-                android:padding="@dimen/_5sdp" />
-        </com.google.android.material.card.MaterialCardView>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_20sdp">
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/don_t_have_otp"
-                android:textSize="@dimen/_12ssp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sf_pro_regular"
-                android:textStyle="bold" />
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/get_new"
+                android:text="@string/log_in"
                 android:textSize="@dimen/_12ssp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sf_pro_heavy"
