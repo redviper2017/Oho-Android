@@ -11,4 +11,13 @@
     <string name="app_slogan">Dine in with your perfect Date!</string>
     <string name="sign_up">Sign up</string>
     <string name="log_in"><u>Login</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="what_s_your_name">What\'s your name?</string>
+    <string name="what_s_your_mobile_number">What\'s your mobile number?</string>
+    <string name="dummy_mobile_number">+1-202-555-0191</string>
+    <string name="who_do_you_identify_as">Who do you identify as?</string>
+    <string name="what_s_your_date_of_birth">What\'s your date of birth?</string>
+    <string name="dummy_height_feet">5\'</string>
+    <string name="dummy_height_inch">11"</string>
 </resources>

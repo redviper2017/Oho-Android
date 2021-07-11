@@ -10,4 +10,6 @@
     <color name="colorStartLinearGradient">#E58282</color>
     <color name="colorCenterLinearGradient">#C1596C</color>
     <color name="colorEndLinearGradient">#AB3B61</color>
+    <color name="colorIconDisabled">#606770</color>
+    <color name="colorTitleBlue">#123D6A</color>
 </resources>

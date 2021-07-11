@@ -1,8 +1,10 @@
-package com.oho.oho;
+package com.oho.oho.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.oho.oho.R;
 
 public class MainActivity extends AppCompatActivity {
 

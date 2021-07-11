@@ -55,7 +55,6 @@
             android:textSize="@dimen/_12ssp"
             android:textColor="@color/black"
             android:fontFamily="@font/sf_pro_regular"
-            android:textStyle="bold"
             android:layout_marginStart="@dimen/_10sdp"
             android:textAllCaps="true"/>
         <com.google.android.material.card.MaterialCardView
@@ -105,8 +104,7 @@
                 android:text="@string/don_t_have_an_account"
                 android:textSize="@dimen/_12ssp"
                 android:textColor="@color/black"
-                android:fontFamily="@font/sf_pro_regular"
-                android:textStyle="bold" />
+                android:fontFamily="@font/sf_pro_regular" />
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -136,7 +134,6 @@
             android:textSize="@dimen/_12ssp"
             android:textColor="@color/black"
             android:fontFamily="@font/sf_pro_regular"
-            android:textStyle="bold"
             android:layout_marginStart="@dimen/_10sdp"
             android:textAllCaps="true"/>
         <com.google.android.material.card.MaterialCardView
@@ -183,8 +180,7 @@
                 android:text="@string/don_t_have_otp"
                 android:textSize="@dimen/_12ssp"
                 android:textColor="@color/black"
-                android:fontFamily="@font/sf_pro_regular"
-                android:textStyle="bold" />
+                android:fontFamily="@font/sf_pro_regular" />
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
