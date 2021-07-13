@@ -68,7 +68,7 @@ public class FormHeightFragment extends Fragment {
 //        inchPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
 //            @Override
 //            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-//                int inchSelected = newVal+1;
+//                int inchSelected = newVal+1;6
 //                Toast.makeText(getContext(),"inch = "+inchSelected,Toast.LENGTH_SHORT).show();
 //            }
 //        });
