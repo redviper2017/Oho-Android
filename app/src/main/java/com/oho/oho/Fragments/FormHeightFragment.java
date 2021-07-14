@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,10 +58,15 @@ public class FormHeightFragment extends Fragment {
             @Override
             public void onScrollStateChange(NumberPicker view, int scrollState) {
                 if (scrollState == NumberPicker.OnScrollListener.SCROLL_STATE_IDLE) {
-                    int feetSelected = feetPicker.getValue()+1;
-                    Toast.makeText(getContext(),"feet = "+feetSelected,Toast.LENGTH_SHORT).show();
-                    String feetSelectedText = String.valueOf(feetSelected)+" \'";
-                    feet.setText(feetSelectedText);
+
+                    new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            int feetSelected = feetPicker.getValue()+1;
+                            String feetSelectedText = String.valueOf(feetSelected)+" \'";
+                            feet.setText(feetSelectedText);
+                        }
+                    }, 100);
                 }
             }
         });
@@ -77,10 +84,16 @@ public class FormHeightFragment extends Fragment {
             @Override
             public void onScrollStateChange(NumberPicker view, int scrollState) {
                 if (scrollState == NumberPicker.OnScrollListener.SCROLL_STATE_IDLE) {
-                    int inchSelected = inchPicker.getValue()+1;
-                    Toast.makeText(getContext(),"inch = "+inchSelected,Toast.LENGTH_SHORT).show();
-                    String inchSelectedText = String.valueOf(inchSelected)+" \"";
-                    inch.setText(inchSelectedText);
+
+                    new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            int inchSelected = inchPicker.getValue()+1;
+                            String inchSelectedText = String.valueOf(inchSelected)+" \"";
+                            inch.setText(inchSelectedText);
+                        }
+                    }, 100);
+
                 }
             }
         });

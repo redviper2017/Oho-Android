@@ -11,6 +11,8 @@ import com.oho.oho.Fragments.FormHeightFragment;
 import com.oho.oho.Fragments.FormNameFragment;
 import com.oho.oho.Fragments.FormOccupationFragment;
 import com.oho.oho.Fragments.FormPhoneFragment;
+import com.oho.oho.Fragments.FormRaceFragment;
+import com.oho.oho.Fragments.FormReligionFragment;
 
 public class CreateProfileAdapter extends FragmentPagerAdapter {
 
@@ -34,12 +36,16 @@ public class CreateProfileAdapter extends FragmentPagerAdapter {
                 return new FormDobFragment();
             case 5:
                 return new FormHeightFragment();
+            case 6:
+                return new FormReligionFragment();
+            case 7:
+                return new FormRaceFragment();
         }
         return new Fragment();
     }
 
     @Override
     public int getCount() {
-        return 6;
+        return 8;
     }
 }

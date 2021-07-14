@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,7 @@ import com.google.android.material.textview.MaterialTextView;
 import com.oho.oho.R;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -59,9 +62,24 @@ public class FormDobFragment extends Fragment {
             @Override
             public void onScrollStateChange(NumberPicker view, int scrollState) {
                 if (scrollState == NumberPicker.OnScrollListener.SCROLL_STATE_IDLE){
-                    int age = Calendar.getInstance().get(Calendar.YEAR) - yearPicker.getValue();
-                    String age_string = age+" years";
-                    ageText.setText(age_string);
+                    new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            int age = Calendar.getInstance().get(Calendar.YEAR) - yearPicker.getValue();
+
+                            int monthint =Arrays.asList(monthPickerValues).indexOf(monthePicker.getValue());
+
+                            if(Calendar.getInstance().get(Calendar.MONTH)>= monthint){
+                                --age;
+                                String age_string = age+" years";
+                                ageText.setText(age_string);
+                            }else {
+                                String age_string = age+" years";
+                                ageText.setText(age_string);
+                            }
+
+                        }
+                    }, 100);
                 }
             }
         });

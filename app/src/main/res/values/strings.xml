@@ -20,4 +20,30 @@
     <string name="what_s_your_date_of_birth">What\'s your date of birth?</string>
     <string name="dummy_height_feet">5\'</string>
     <string name="dummy_height_inch">11"</string>
+    <string-array name="religion_array">
+        <item>Christianity</item>
+        <item>Judaism</item>
+        <item>Islam</item>
+        <item>Hinduism</item>
+        <item>Sikhism</item>
+        <item>Agnosticism</item>
+        <item>Atheism</item>
+        <item>Buddhism</item>
+        <item>Shintoism</item>
+        <item>Spiritual</item>
+        <item>Taoism</item>
+        <item>Bahai</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="race_array">
+        <item>White</item>
+        <item>Asian</item>
+        <item>African American</item>
+        <item>Black</item>
+        <item>Hispanic</item>
+        <item>Latinx</item>
+        <item>Pacific Islander</item>
+        <item>American Indian</item>
+        <item>Others</item>
+    </string-array>
 </resources>
