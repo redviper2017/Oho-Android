@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView
-    android:id="@+id/button_religion"
+    android:id="@+id/button_race"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/_50sdp"
@@ -8,11 +8,11 @@
     android:layout_margin="@dimen/_5sdp"
     app:cardCornerRadius="@dimen/_50sdp">
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/text_religion"
+        android:id="@+id/text_race"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Islam"
+        android:text="Hispanic"
         android:textColor="@color/black"
         android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/sf_pro_regular"

@@ -4,10 +4,13 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textview.MaterialTextView;
 import com.oho.oho.R;
 
@@ -17,6 +20,9 @@ public class SelectReligionAdapter extends RecyclerView.Adapter<SelectReligionAd
 
     private final ArrayList<String> religionDataArrayList;
     private Context context;
+
+    private boolean isButtonSelectedFlag = false;
+    private String  buttonSelected = "";
 
     public SelectReligionAdapter(ArrayList<String> religionDataArrayList, Context context){
         this.religionDataArrayList = religionDataArrayList;
@@ -41,11 +47,37 @@ public class SelectReligionAdapter extends RecyclerView.Adapter<SelectReligionAd
         return religionDataArrayList.size();
     }
 
-    public static class RecyclerViewHolder extends RecyclerView.ViewHolder{
+    public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private final MaterialTextView religionText;
+        private final MaterialCardView religionButton;
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
-            religionText = itemView.findViewById(R.id.text_religion);
+            religionText   = itemView.findViewById(R.id.text_religion);
+            religionButton = itemView.findViewById(R.id.button_religion);
+
+            religionButton.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            if(v.getId() == R.id.button_religion){
+                if (religionText.getTag().equals("unselected")) {
+                    if (!isButtonSelectedFlag) {
+                        isButtonSelectedFlag = true;
+                        buttonSelected = religionText.getText().toString();
+                        religionText.setTag("selected");
+                        religionText.setTextColor(ResourcesCompat.getColor(context.getResources(), R.color.white, context.getTheme()));
+                        religionText.setBackground(ResourcesCompat.getDrawable(context.getResources(), R.drawable.gradient_button, context.getTheme()));
+                    }else
+                        Toast.makeText(context,"You can only select one religion",Toast.LENGTH_SHORT).show();
+                }else {
+                    isButtonSelectedFlag = false;
+                    buttonSelected = "";
+                    religionText.setTag("unselected");
+                    religionText.setTextColor(ResourcesCompat.getColor(context.getResources(),R.color.black,context.getTheme()));
+                    religionText.setBackground(ResourcesCompat.getDrawable(context.getResources(), R.color.white, context.getTheme()));
+                }
+            }
         }
     }
 }

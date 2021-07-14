@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.oho.oho.Adapters.SelectRaceAdapter;
 import com.oho.oho.Adapters.SelectReligionAdapter;
 import com.oho.oho.R;
 
@@ -31,7 +32,7 @@ public class FormRaceFragment extends Fragment {
 
         ArrayList<String> raceDataArrayList = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.race_array)));
 
-        SelectReligionAdapter adapter = new SelectReligionAdapter(raceDataArrayList,getContext());
+        SelectRaceAdapter adapter = new SelectRaceAdapter(raceDataArrayList,getContext());
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(),2);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);

@@ -4,10 +4,13 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textview.MaterialTextView;
 import com.oho.oho.R;
 
@@ -18,6 +21,9 @@ public class SelectRaceAdapter extends RecyclerView.Adapter<SelectRaceAdapter.Re
     private final ArrayList<String> raceDataArrayList;
     private Context context;
 
+    private boolean isButtonSelectedFlag = false;
+    private String  buttonSelected = "";
+
     public SelectRaceAdapter(ArrayList<String> raceDataArrayList, Context context){
         this.raceDataArrayList = raceDataArrayList;
         this.context = context;
@@ -26,7 +32,7 @@ public class SelectRaceAdapter extends RecyclerView.Adapter<SelectRaceAdapter.Re
     @NonNull
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_religion,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_race,parent,false);
         return new RecyclerViewHolder(view);
     }
 
@@ -41,11 +47,38 @@ public class SelectRaceAdapter extends RecyclerView.Adapter<SelectRaceAdapter.Re
         return raceDataArrayList.size();
     }
 
-    public static class RecyclerViewHolder extends RecyclerView.ViewHolder{
+    public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private final MaterialTextView raceText;
+        private final MaterialCardView raceButton;
+
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
-            raceText = itemView.findViewById(R.id.text_religion);
+            raceText   = itemView.findViewById(R.id.text_race);
+            raceButton = itemView.findViewById(R.id.button_race);
+
+            raceButton.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            if(v.getId() == R.id.button_race){
+                if (raceText.getTag().equals("unselected")) {
+                    if (!isButtonSelectedFlag) {
+                        isButtonSelectedFlag = true;
+                        buttonSelected = raceText.getText().toString();
+                        raceText.setTag("selected");
+                        raceText.setTextColor(ResourcesCompat.getColor(context.getResources(), R.color.white, context.getTheme()));
+                        raceText.setBackground(ResourcesCompat.getDrawable(context.getResources(), R.drawable.gradient_button, context.getTheme()));
+                    }else
+                        Toast.makeText(context,"You can only select one race",Toast.LENGTH_SHORT).show();
+                }else {
+                    isButtonSelectedFlag = false;
+                    buttonSelected = "";
+                    raceText.setTag("unselected");
+                    raceText.setTextColor(ResourcesCompat.getColor(context.getResources(),R.color.black,context.getTheme()));
+                    raceText.setBackground(ResourcesCompat.getDrawable(context.getResources(), R.color.white, context.getTheme()));
+                }
+            }
         }
     }
 }
