@@ -20,6 +20,7 @@
     <string name="what_s_your_date_of_birth">What\'s your date of birth?</string>
     <string name="dummy_height_feet">5\'</string>
     <string name="dummy_height_inch">11"</string>
+    <string name="dummy_location">Fairfax, VA</string>
     <string-array name="religion_array">
         <item>Christianity</item>
         <item>Judaism</item>

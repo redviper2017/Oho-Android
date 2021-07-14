@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.oho.oho.Fragments.FormDobFragment;
 import com.oho.oho.Fragments.FormGenderFragment;
 import com.oho.oho.Fragments.FormHeightFragment;
+import com.oho.oho.Fragments.FormLocationFragment;
 import com.oho.oho.Fragments.FormNameFragment;
 import com.oho.oho.Fragments.FormOccupationFragment;
 import com.oho.oho.Fragments.FormPhoneFragment;
@@ -40,12 +41,14 @@ public class CreateProfileAdapter extends FragmentPagerAdapter {
                 return new FormReligionFragment();
             case 7:
                 return new FormRaceFragment();
+            case 8:
+                return new FormLocationFragment();
         }
         return new Fragment();
     }
 
     @Override
     public int getCount() {
-        return 8;
+        return 9;
     }
 }

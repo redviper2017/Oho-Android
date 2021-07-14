@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background_create_profile"
+    tools:context=".Fragments.FormLocationFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_heavy"
+        android:text="Where do you live?"
+        android:textSize="@dimen/_30ssp"
+        android:textColor="@color/colorTitleBlue"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sf_pro_regular"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:textAllCaps="true"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/location_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:padding="@dimen/_5sdp"
+            android:hint="@string/dummy_location"
+            android:drawablePadding="@dimen/_10sdp"
+            android:fontFamily="@font/sf_pro_regular"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/location_ic"/>
+    </com.google.android.material.card.MaterialCardView>
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/_25sdp"-->
+<!--        android:layout_marginStart="@dimen/_25sdp"-->
+<!--        android:layout_marginEnd="@dimen/_25sdp">-->
+
+<!--        <com.google.android.gms.maps.MapView-->
+<!--            android:id="@+id/myMap"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center" />-->
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:id="@+id/button_get_current_location"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            app:cardCornerRadius="15dp"-->
+<!--            app:cardElevation="10dp">-->
+
+<!--            <com.google.android.material.textview.MaterialTextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/gradient_button"-->
+<!--                android:drawableStart="@drawable/location_current_ic"-->
+<!--                android:drawablePadding="10dp"-->
+<!--                android:fontFamily="@font/sf_pro_regular"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingStart="15dp"-->
+<!--                android:paddingTop="5dp"-->
+<!--                android:paddingEnd="15dp"-->
+<!--                android:paddingBottom="5dp"-->
+<!--                android:text="Get my location"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="14sp"-->
+<!--                app:fontFamily="@font/sf_pro_regular" />-->
+<!--        </com.google.android.material.card.MaterialCardView>-->
+<!--    </RelativeLayout>-->
+
+</LinearLayout>
